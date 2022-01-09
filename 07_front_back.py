@@ -10,9 +10,14 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
+def _split_front_back(s):
+    _slice = len(s) // 2 if len(s) % 2 == 0 else (len(s) // 2) + (len(s) % 2)
+    return s[:_slice], s[_slice:]
+
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    a_frente, a_tras = _split_front_back(a)
+    b_frente, b_tras = _split_front_back(b)
+    return f'{a_frente}{b_frente}{a_tras}{b_tras}'
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
