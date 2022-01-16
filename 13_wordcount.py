@@ -56,6 +56,33 @@ import sys
 
 # +++ SUA SOLUÇÃO +++
 # Defina as funções print_words(filename) e print_top(filename).
+def word_counts(filename):
+    with open(filename) as f:
+        lines = f.read().splitlines()
+        elements = ' '.join(lines)
+        elements = elements.lower()
+    
+    word_count = {}
+    for element in elements.split():
+        if element in word_count:
+            word_count[element] += 1
+        else:
+            word_count[element] = 1
+    return word_count
+
+def print_words(filename):
+    word_count = word_counts(filename)
+    
+    for key, value in word_count.items():
+        print(key, value)
+
+def print_top(filename):
+    word_count = word_counts(filename)
+    ordered_items = sorted(word_count.items(), key=lambda row: row[1], reverse=True)
+    
+    for key, value in ordered_items:
+        print(key, value)
+    
 
 
 # A função abaixo chama print_words() ou print_top() de acordo com os
