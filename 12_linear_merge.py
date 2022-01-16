@@ -10,6 +10,7 @@ A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 """
 import heapq
 
+# TODO: implementar algoritmo na mão
 def linear_merge(list1, list2):
     return list(heapq.merge(list1, list2))
 
