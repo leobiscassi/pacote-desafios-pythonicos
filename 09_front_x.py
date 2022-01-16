@@ -10,7 +10,8 @@ Irá retornar: ['xanadu', 'xyz', 'aardvark', 'apple', 'banana' ,'mix']
 Dica: Isso pode ser resolvido criando 2 listas e ordenando cada uma
 antes de combina-las.
 """
-
+# TODO: Tentar implementar o hack que utilize somente a função de ordenação
+# mudando a maneira como ela funciona e com uma lista só
 def front_x(words):
     words_with_x = list(filter(lambda w: w.startswith('x'), words))
     words = list(filter(lambda w: not w.startswith('x'), words))
