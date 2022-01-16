@@ -8,9 +8,7 @@ for menor que 2, retorne uma string vazia.
 """
 
 def both_ends(s):
-    if len(s) < 2:
-        return ''
-    message = f'{s[:2]}{s[-2:]}'
+    message = f'{s[:2]}{s[-2:]}' if len(s) > 2 else ''
     return message
 
 
