@@ -13,11 +13,7 @@ Retorne o resultado da string.
 def verbing(s):
     if len(s) < 3:
         return s
-    
-    if s.endswith('ing'):
-        message = f'{s}ly'
-    else:
-        message = f'{s}ing'
+    message = f'{s}ly' if s.endswith('ing') else f'{s}ing'
     return message
 
 
