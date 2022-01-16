@@ -8,6 +8,7 @@ Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
 
+# TODO: tentar implementar sem utilizar indíce usando a função zip
 def remove_adjacent(nums):
     without_adj = []
     for n in nums:
