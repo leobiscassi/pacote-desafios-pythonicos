@@ -80,8 +80,10 @@ def print_top(filename):
     word_count = word_counts(filename)
     ordered_items = sorted(word_count.items(), key=lambda row: row[1], reverse=True)
     
-    for key, value in ordered_items:
-        print(key, value)
+    for idx, item in enumerate(ordered_items):
+        key, value = item
+        if idx < 20:
+            print(key, value)
     
 
 
