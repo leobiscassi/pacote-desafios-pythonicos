@@ -17,7 +17,7 @@ def _split_front_back(s):
 def front_back(a, b):
     a_frente, a_tras = _split_front_back(a)
     b_frente, b_tras = _split_front_back(b)
-    return f'{a_frente}{b_frente}{a_tras}{b_tras}'
+    return ''.join([a_frente, b_frente, a_tras, b_tras])
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
